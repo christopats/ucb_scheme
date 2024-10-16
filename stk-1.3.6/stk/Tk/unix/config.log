@@ -1,0 +1,55 @@
+This file contains any messages produced by compilers while
+running configure, to aid debugging if configure makes a mistake.
+
+gcc -E
+gcc -E
+gcc -E
+gcc -E
+gcc -E
+gcc -E
+gcc -c conftest.c
+gcc -o conftest conftest.c
+configure:781:1: error: type specifier missing, defaults to 'int'; ISO C99 and later do not support implicit int [-Wimplicit-int]
+main(){return(0);}
+^
+int
+1 error generated.
+gcc -E
+gcc -E
+gcc -E
+gcc -E
+gcc -E
+gcc -E
+gcc -E
+gcc -E
+gcc -c conftest.c
+gcc -E
+configure:1166:10: fatal error: 'X11/Intrinsic.h' file not found
+#include <X11/Intrinsic.h>
+         ^~~~~~~~~~~~~~~~~
+1 error generated.
+gcc -o conftest conftest.c -lXt
+configure:1232:1: error: call to undeclared function 'XtMalloc'; ISO C99 and later do not support implicit function declarations [-Wimplicit-function-declaration]
+XtMalloc()
+^
+1 error generated.
+gcc -o conftest conftest.c -lXbsd
+ld: library 'Xbsd' not found
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+gcc -o conftest conftest.c
+gcc -o conftest conftest.c
+gcc -o conftest conftest.c
+configure:1786:6: warning: incompatible redeclaration of library function 'sin' [-Wincompatible-library-redeclaration]
+char sin();
+     ^
+configure:1786:6: note: 'sin' is a builtin with type 'double (double)'
+1 warning generated.
+gcc -o conftest conftest.c -lieee
+ld: library 'ieee' not found
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+gcc -o conftest conftest.c
+configure:1871:6: warning: incompatible redeclaration of library function 'memmove' [-Wincompatible-library-redeclaration]
+char memmove();
+     ^
+configure:1871:6: note: 'memmove' is a builtin with type 'void *(void *, const void *, unsigned long)'
+1 warning generated.

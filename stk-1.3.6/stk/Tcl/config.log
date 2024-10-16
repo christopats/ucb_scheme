@@ -1,0 +1,203 @@
+This file contains any messages produced by compilers while
+running configure, to aid debugging if configure makes a mistake.
+
+gcc -o conftest -DMACOSX -O2 -g -O2 -DSTk_CODE -DSCM_CODE -m32 conftest.c
+configure:665:1: error: type specifier missing, defaults to 'int'; ISO C99 and later do not support implicit int [-Wimplicit-int]
+main(){return(0);}
+^
+int
+1 error generated.
+gcc -o conftest -DMACOSX -O2 -g -O2 -DSTk_CODE -DSCM_CODE -m32 conftest.c
+ld: unknown/unsupported architecture name for: -arch armv4t
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+gcc -o conftest -DMACOSX -O2 -g -O2 -DSTk_CODE -DSCM_CODE -m32 conftest.c
+ld: unknown/unsupported architecture name for: -arch armv4t
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+gcc -o conftest -DMACOSX -O2 -g -O2 -DSTk_CODE -DSCM_CODE -m32 conftest.c
+configure:699:6: warning: incompatible redeclaration of library function 'strerror' [-Wincompatible-library-redeclaration]
+char strerror();
+     ^
+configure:699:6: note: 'strerror' is a builtin with type 'char *(int)'
+1 warning generated.
+ld: unknown/unsupported architecture name for: -arch armv4t
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+gcc -o conftest -DMACOSX -O2 -g -O2 -DSTk_CODE -DSCM_CODE -m32 conftest.c
+configure:699:6: warning: incompatible redeclaration of library function 'strstr' [-Wincompatible-library-redeclaration]
+char strstr();
+     ^
+configure:699:6: note: 'strstr' is a builtin with type 'char *(const char *, const char *)'
+1 warning generated.
+ld: unknown/unsupported architecture name for: -arch armv4t
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+gcc -o conftest -DMACOSX -O2 -g -O2 -DSTk_CODE -DSCM_CODE -m32 conftest.c
+configure:748:6: warning: incompatible redeclaration of library function 'strtol' [-Wincompatible-library-redeclaration]
+char strtol();
+     ^
+configure:748:6: note: 'strtol' is a builtin with type 'long (const char *, char **, int)'
+1 warning generated.
+ld: unknown/unsupported architecture name for: -arch armv4t
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+gcc -o conftest -DMACOSX -O2 -g -O2 -DSTk_CODE -DSCM_CODE -m32 conftest.c
+ld: unknown/unsupported architecture name for: -arch armv4t
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+gcc -o conftest -DMACOSX -O2 -g -O2 -DSTk_CODE -DSCM_CODE -m32 conftest.c
+ld: unknown/unsupported architecture name for: -arch armv4t
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+gcc -o conftest -DMACOSX -O2 -g -O2 -DSTk_CODE -DSCM_CODE -m32 conftest.c
+ld: unknown/unsupported architecture name for: -arch armv4t
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+gcc -o conftest -DMACOSX -O2 -g -O2 -DSTk_CODE -DSCM_CODE -m32 conftest.c
+ld: unknown/unsupported architecture name for: -arch armv4t
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+gcc -o conftest -DMACOSX -O2 -g -O2 -DSTk_CODE -DSCM_CODE -m32 conftest.c
+ld: unknown/unsupported architecture name for: -arch armv4t
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+gcc -o conftest -DMACOSX -O2 -g -O2 -DSTk_CODE -DSCM_CODE -m32 conftest.c
+configure:995:6: warning: incompatible redeclaration of library function 'sin' [-Wincompatible-library-redeclaration]
+char sin();
+     ^
+configure:995:6: note: 'sin' is a builtin with type 'double (double)'
+1 warning generated.
+ld: unknown/unsupported architecture name for: -arch armv4t
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+gcc -o conftest -DMACOSX -O2 -g -O2 -DSTk_CODE -DSCM_CODE -m32 conftest.c -lieee
+ld: unknown/unsupported architecture name for: -arch armv4t
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+gcc -o conftest -DMACOSX -O2 -g -O2 -DSTk_CODE -DSCM_CODE -m32 conftest.c
+ld: unknown/unsupported architecture name for: -arch armv4t
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+gcc -E
+gcc -E
+gcc -E
+gcc -E
+gcc -E
+gcc -E
+gcc -E
+gcc -E
+gcc -E
+gcc -E
+gcc -E
+gcc -E
+gcc -E
+gcc -c -DMACOSX -O2 -g -O2 -DSTk_CODE -DSCM_CODE -m32 conftest.c
+gcc -E
+gcc -c -DMACOSX -O2 -g -O2 -DSTk_CODE -DSCM_CODE -m32 conftest.c
+gcc -c -DMACOSX -O2 -g -O2 -DSTk_CODE -DSCM_CODE -m32 conftest.c
+configure:1625:20: warning: expression result unused [-Wunused-value]
+struct tm *tp; tp->tm_sec;
+               ~~  ^~~~~~
+1 warning generated.
+gcc -c -DMACOSX -O2 -g -O2 -DSTk_CODE -DSCM_CODE -m32 conftest.c
+configure:1658:18: warning: expression result unused [-Wunused-value]
+struct tm tm; tm.tm_zone;
+              ~~ ^~~~~~~
+1 warning generated.
+gcc -c -DMACOSX -O2 -g -O2 -DSTk_CODE -DSCM_CODE -m32 conftest.c
+configure:1723:18: error: no member named 'tm_tzadj' in 'struct tm'
+struct tm tm; tm.tm_tzadj;
+              ~~ ^
+1 error generated.
+gcc -c -DMACOSX -O2 -g -O2 -DSTk_CODE -DSCM_CODE -m32 conftest.c
+configure:1747:18: warning: expression result unused [-Wunused-value]
+struct tm tm; tm.tm_gmtoff;
+              ~~ ^~~~~~~~~
+1 warning generated.
+gcc -c -DMACOSX -O2 -g -O2 -DSTk_CODE -DSCM_CODE -m32 conftest.c
+configure:1777:10: error: call to undeclared library function 'exit' with type 'void (int) __attribute__((noreturn))'; ISO C99 and later do not support implicit function declarations [-Wimplicit-function-declaration]
+         exit (0);
+         ^
+configure:1777:10: note: include the header <stdlib.h> or explicitly provide a declaration for 'exit'
+1 error generated.
+gcc -o conftest -DMACOSX -O2 -g -O2 -DSTk_CODE -DSCM_CODE -m32 conftest.c
+configure:1846:6: warning: incompatible redeclaration of library function 'strtoul' [-Wincompatible-library-redeclaration]
+char strtoul();
+     ^
+configure:1846:6: note: 'strtoul' is a builtin with type 'unsigned long (const char *, char **, int)'
+1 warning generated.
+ld: unknown/unsupported architecture name for: -arch armv4t
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+gcc -o conftest -DMACOSX -O2 -g -O2 -DSTk_CODE -DSCM_CODE -m32 conftest.c
+configure:1929:6: warning: incompatible redeclaration of library function 'strtod' [-Wincompatible-library-redeclaration]
+char strtod();
+     ^
+configure:1929:6: note: 'strtod' is a builtin with type 'double (const char *, char **)'
+1 warning generated.
+ld: unknown/unsupported architecture name for: -arch armv4t
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+gcc -E
+gcc -E
+gcc -E
+gcc -E
+gcc -E
+gcc -E
+gcc -E
+gcc -o conftest -DMACOSX -O2 -g -O2 -DSTk_CODE -DSCM_CODE -m32 conftest.c
+ld: unknown/unsupported architecture name for: -arch armv4t
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+gcc -o conftest -DMACOSX -O2 -g -O2 -DSTk_CODE -DSCM_CODE -m32 conftest.c
+ld: unknown/unsupported architecture name for: -arch armv4t
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+gcc -c -DMACOSX -O2 -g -O2 -DSTk_CODE -DSCM_CODE -m32 conftest.c
+gcc -o conftest -DMACOSX -O2 -g -O2 -DSTk_CODE -DSCM_CODE -m32 conftest.c
+configure:2505:6: warning: incompatible redeclaration of library function 'vfork' [-Wincompatible-library-redeclaration]
+char vfork();
+     ^
+configure:2505:6: note: 'vfork' is a builtin with type 'int (void)'
+1 warning generated.
+ld: unknown/unsupported architecture name for: -arch armv4t
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+gcc -o conftest -DMACOSX -O2 -g -O2 -DSTk_CODE -DSCM_CODE -m32 conftest.c
+configure:2612:6: warning: incompatible redeclaration of library function 'strncasecmp' [-Wincompatible-library-redeclaration]
+char strncasecmp();
+     ^
+configure:2612:6: note: 'strncasecmp' is a builtin with type 'int (const char *, const char *, unsigned long)'
+1 warning generated.
+ld: unknown/unsupported architecture name for: -arch armv4t
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+gcc -o conftest -DMACOSX -O2 -g -O2 -DSTk_CODE -DSCM_CODE -m32 conftest.c -lsocket
+configure:2660:1: error: call to undeclared library function 'strncasecmp' with type 'int (const char *, const char *, unsigned long)'; ISO C99 and later do not support implicit function declarations [-Wimplicit-function-declaration]
+strncasecmp()
+^
+configure:2660:1: note: include the header <strings.h> or explicitly provide a declaration for 'strncasecmp'
+configure:2660:13: error: too few arguments to function call, expected 3, have 0
+strncasecmp()
+~~~~~~~~~~~ ^
+2 errors generated.
+gcc -o conftest -DMACOSX -O2 -g -O2 -DSTk_CODE -DSCM_CODE -m32 conftest.c -linet
+configure:2697:1: error: call to undeclared library function 'strncasecmp' with type 'int (const char *, const char *, unsigned long)'; ISO C99 and later do not support implicit function declarations [-Wimplicit-function-declaration]
+strncasecmp()
+^
+configure:2697:1: note: include the header <strings.h> or explicitly provide a declaration for 'strncasecmp'
+configure:2697:13: error: too few arguments to function call, expected 3, have 0
+strncasecmp()
+~~~~~~~~~~~ ^
+2 errors generated.
+gcc -o conftest -DMACOSX -O2 -g -O2 -DSTk_CODE -DSCM_CODE -m32 conftest.c
+ld: unknown/unsupported architecture name for: -arch armv4t
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+gcc -o conftest -DMACOSX -O2 -g -O2 -DSTk_CODE -DSCM_CODE -m32 conftest.c
+ld: unknown/unsupported architecture name for: -arch armv4t
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+gcc -E
+gcc -E
+configure:2900:10: fatal error: 'net/errno.h' file not found
+#include <net/errno.h>
+         ^~~~~~~~~~~~~
+1 error generated.
+gcc -o conftest -DMACOSX -O2 -g -O2 -DSTk_CODE -DSCM_CODE -m32 conftest.c
+ld: unknown/unsupported architecture name for: -arch armv4t
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+gcc -o conftest -DMACOSX -O2 -g -O2 -DSTk_CODE -DSCM_CODE -m32 conftest.c -lsocket -lnsl
+ld: unknown/unsupported architecture name for: -arch armv4t
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+gcc -o conftest -DMACOSX -O2 -g -O2 -DSTk_CODE -DSCM_CODE -m32 conftest.c
+ld: unknown/unsupported architecture name for: -arch armv4t
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+gcc -o conftest -DMACOSX -O2 -g -O2 -DSTk_CODE -DSCM_CODE -m32 conftest.c -lnsl
+ld: unknown/unsupported architecture name for: -arch armv4t
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+gcc -o conftest -DMACOSX -O2 -g -O2 -DSTk_CODE -DSCM_CODE -m32 conftest.c -ldl
+configure:3247:1: error: call to undeclared function 'dlopen'; ISO C99 and later do not support implicit function declarations [-Wimplicit-function-declaration]
+dlopen()
+^
+1 error generated.
