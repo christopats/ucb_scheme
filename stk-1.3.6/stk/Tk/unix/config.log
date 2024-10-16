@@ -23,16 +23,6 @@ gcc -E
 gcc -E
 gcc -E
 gcc -c conftest.c
-gcc -E
-configure:1166:10: fatal error: 'X11/Intrinsic.h' file not found
-#include <X11/Intrinsic.h>
-         ^~~~~~~~~~~~~~~~~
-1 error generated.
-gcc -o conftest conftest.c -lXt
-configure:1232:1: error: call to undeclared function 'XtMalloc'; ISO C99 and later do not support implicit function declarations [-Wimplicit-function-declaration]
-XtMalloc()
-^
-1 error generated.
 gcc -o conftest conftest.c -lXbsd
 ld: library 'Xbsd' not found
 clang: error: linker command failed with exit code 1 (use -v to see invocation)
