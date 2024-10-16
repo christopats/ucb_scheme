@@ -16,6 +16,8 @@ static char sccsid[] = "@(#) strtol.c 1.3 94/12/17 16:26:25";
 
 #include <ctype.h>
 #include <stdlib.h>
+#include <stddef.h>
+
 
 
 /*
@@ -38,14 +40,14 @@ static char sccsid[] = "@(#) strtol.c 1.3 94/12/17 16:26:25";
  *----------------------------------------------------------------------
  */
 
-long int
-strtol(string, endPtr, base)
+long int strtol(const char *string, const char **endPtr, int base)
+{
     const char *string;		/* String of ASCII digits, possibly
 				 * preceded by white space.  For bases
 				 * greater than 10, either lower- or
 				 * upper-case digits may be used.
 				 */
-    char **endPtr;		/* Where to store address of terminating
+    const char **endPtr;		/* Where to store address of terminating
 				 * character, or NULL. */
     int base;			/* Base for conversion.  Must be less
 				 * than 37.  If 0, then the base is chosen
@@ -53,8 +55,7 @@ strtol(string, endPtr, base)
 				 * "0x" means hex, "0" means octal, anything
 				 * else means decimal.
 				 */
-{
-    register char *p;
+    register const char *p;
     int result;
 
     /*
