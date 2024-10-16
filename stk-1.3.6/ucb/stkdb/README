@@ -1,0 +1,122 @@
+		       INTERIM NOTES on Stkdb.
+
+
+Setting Up Test Version
+------- -- ---- -------
+
+For the experimental setup on the instructional Sparcs, using Emacs
+21, just 
+
+  * Make sure that ~cs61b/bin/arch/sun4u is first in your search path when
+    you start Emacs.
+
+  * Load the file ~cs61b/hilfinger/stkdb/stkdb.cs61b into emacs
+    via load-file, 
+
+  * Skip the next section.
+
+
+Setting Up, General Case
+------- --  ------- ----
+
+1. You will need my modifications to STk (these record more accurate versions
+   of the current environment for the subexpressions in the evaluation stack, 
+   correct the default signal settings, and correct the set of features 
+   provided by Stk).
+
+2. You need the SLIB library.
+
+3. Either install the scheme (.scm) files for stkdb in 
+   a. A subdirectory named stkdb in the SLIB library directory, or
+   b. In an arbitrary directory FOO, in which case you must set the 
+      environment variable STKDB_LIBRARY_PATH to "FOO/" (note the
+      slash) before starting Emacs, or include the command
+	(setq stkdb-vicinity "FOO/")
+      in your .emacs file. 
+
+4. In Emacs, load the file stkdb.el from wherever you put it.  Make sure
+   that scheme-program-name is properly set (actually, it has to be set
+   to "scheme" at the moment, and you should use "scheme" as the name of
+   STk (use a symbolic link if needed).  Eventually, I'll fix this).
+
+Starting stkdb
+-------- -----
+
+In the inferior Scheme buffer, enter the stkdb minor mode with the Emacs
+command M-x stkdb-mode.  This loads stkdb into Scheme as well.
+
+The command (stkdb) in the inferior Scheme buffer enters the debugger (you'll
+see a [-] prompt).  Breakpoints, etc., work only on expressions you evaluate
+from this prompt.
+
+Using stkdb
+----- -----
+
+At the [-] prompt, you can evaluate expressions just as for ordinary use of
+STk.  In addition, there are a number of commands, listed below.  Some of
+these are also available via key bindings or the "Debug" menu.
+
+In a Scheme source buffer, the command C-c d compiles the file with stkdb
+hooks and loads it into the inferior Scheme process.  Breakpoints, stepping,
+etc., work only for files compiled and loaded in this way.  The command 
+C-x SPACE sets a breakpoint at the current line.
+
+When stopped at a breakpoint or by an error, the prompt changes to
+[N] (where N indicates the number of levels deep you are in the debugger).
+Emacs highlights the expression currently being evaluated:
+   * Green means "this expression is about to be evaluated"
+   * Blue means "we just finished evaluating this expression"
+   * Purple means "we are in the process of evaluating this expression"
+     You see this when you do an "up" command.
+   * Red means "evaluation of this expression just caused an error."
+
+Stkdb commands
+----- --------
+
+* step, s, C-c s, F5
+     "Single-step" the current evaluation.  Goes to the next subexpression
+     to be evaluated.
+
+* next, n, C-c n, F6
+     "Step-over" the current expression in the current evaluation.  Goes
+     to the next subexpression after complete evaluation of the current one.
+
+* finish, fin, C-c f, F7
+     Finish evalutation of the current function call.
+
+* continue, cont, C-c r, F8
+     Continue execution of stopped program.
+
+* up, C-c <, F3
+     Go up to the function from which the current one was called.
+     This allows you to look at its variables.
+
+* down, C-c >, F4
+     Go down to the function that was called from the current one.
+
+* info locals
+     Print local variables of current function.
+
+* bt, where
+     Print a backtrace of what functions are currently being evaluated.
+
+* delete
+     Delete all breakpoints.
+
+* delete N
+     Delete breakpoint #N.
+
+* info break
+     List all current breakpoints.
+
+* display on
+     Each time we stop at a breakpoint or after a step or next, display a
+     backtrace and the values of the local variables of the innermost
+     (current) function call.
+
+* display off
+     Turn off the automatic display of back trace and locals.
+
+* reset
+     Go back to plain STk, cutting off execution of the current expression.
+     Use (stkdb) to start debugging again.

@@ -1,0 +1,71 @@
+PREFIX	      = @prefix@
+BINDIR          = ${PREFIX}/bin
+LIBDIR          = ${PREFIX}/lib/stk
+SITESCHEMEDIR   = ${LIBDIR}/site-scheme
+ENVDRAWDIR      = ${SITESCHEMEDIR}/envdraw
+ENVDRAWHELP     = ${PREFIX}/share/envdraw
+VERSION         = `${BINDIR}/stk -version`
+
+INSTALL         = @INSTALL@
+INSTALL_DATA    = @INSTALL_DATA@
+INSTALL_PROGRAM = @INSTALL_PROGRAM@
+
+MKDIR		= @MKDIR@
+MKDIR_INST	= ${MKDIR} -m 755
+
+SRCS	      = color.stk \
+	        env-classes.stk \
+	        env-pointers.stk \
+	        env-toplev.stk \
+	        environments.stk \
+	        math.stk \
+	        meta.stk \
+	        move-composite.stk \
+	        placement.stk \
+	        simple-pointer.stk \
+	        stacks.stk \
+	        view-classes.stk \
+	        view-debug.stk \
+	        view-misc.stk \
+	        view-pointers.stk \
+	        view-profiles.stk \
+	        view-toplev.stk \
+	        view-updates.stk \
+	        view.stk
+
+all: envdraw
+
+install: envdraw
+	@test -d ${ENVDRAWDIR} || ${MKDIR_INST} ${ENVDRAWDIR}
+
+	@for i in ${SRCS}; do \
+		echo "Installing $$i"; \
+		${INSTALL_DATA} $$i ${ENVDRAWDIR}; \
+	done;
+
+	@echo "Installing init file required by envdraw"
+	@${INSTALL_DATA} lib/stk-init.stk ${SITESCHEMEDIR}/envdraw-init.stk
+
+	@echo "Installing startup script"
+	@${INSTALL_PROGRAM} envdraw ${BINDIR}
+
+	@test -d ${ENVDRAWDIR}/icons || ${MKDIR_INST} ${ENVDRAWDIR}/icons
+
+	@${INSTALL_DATA} icons/envdraw ${ENVDRAWDIR}/icons
+	@${INSTALL_DATA} icons/view ${ENVDRAWDIR}/icons
+
+	@test -d ${ENVDRAWHELP} || ${MKDIR_INST} ${ENVDRAWHELP}
+	@test -d ${ENVDRAWHELP}/Help || ${MKDIR_INST} ${ENVDRAWHELP}/Help
+
+	@${INSTALL_DATA} Help/* ${ENVDRAWHELP}/Help
+
+envdraw: envdraw.in
+	@echo "Creating $@"
+	@sed -e 's,[@]PREFIX[@],$(PREFIX),' $< > $@
+	@chmod 755 envdraw
+
+clean:
+	rm -rf envdraw
+
+distclean: clean
+	rm -rf Makefile *~
