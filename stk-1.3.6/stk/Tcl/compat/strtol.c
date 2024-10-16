@@ -15,6 +15,7 @@ static char sccsid[] = "@(#) strtol.c 1.3 94/12/17 16:26:25";
 #endif /* not lint */
 
 #include <ctype.h>
+#include <stdlib.h>
 
 
 /*
@@ -39,7 +40,7 @@ static char sccsid[] = "@(#) strtol.c 1.3 94/12/17 16:26:25";
 
 long int
 strtol(string, endPtr, base)
-    char *string;		/* String of ASCII digits, possibly
+    const char *string;		/* String of ASCII digits, possibly
 				 * preceded by white space.  For bases
 				 * greater than 10, either lower- or
 				 * upper-case digits may be used.
