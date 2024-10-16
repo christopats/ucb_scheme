@@ -29,7 +29,7 @@
 #  ifdef SCM_CODE
 #     include "tclUnixPort.h"
 #  else
-#     include "../unix/tclUnixPort.h"
+#     include "tclUnixPort.h"
 #  endif
 #    endif
 #endif

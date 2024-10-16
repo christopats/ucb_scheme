@@ -14,11 +14,17 @@
 static char sccsid[] = "@(#) strerror.c 1.10 94/12/17 16:26:21";
 #endif /* not lint */
 
+#ifdef __APPLE__
+extern const int sys_nerr;
+extern const char *const sys_errlist[];
+#else
+extern int sys_nerr;
+extern char *sys_errlist[];
+#endif
+
 #include "tclInt.h"
 #include "tclPort.h"
 
-extern int sys_nerr;
-extern char *sys_errlist[];
 /*
  *----------------------------------------------------------------------
  *
