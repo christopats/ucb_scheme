@@ -22,6 +22,7 @@
  * SCCS: @(#) tclUnixPort.h 1.49 97/07/30 14:11:59
  */
 
+#include <stdlib.h>
 #ifndef _TCLUNIXPORT
 #define _TCLUNIXPORT
 
@@ -478,7 +479,9 @@ extern char **environ;
  * up being too many conflicts with slightly-different prototypes.
  */
 
-extern double strtod();
+/* strtod() cannot be declared without prototype. Corrected */
+
+extern double strtod(const char *nptr, char **endptr);
 
 /*
  * The following macros define time related functions in terms of
