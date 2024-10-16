@@ -2,7 +2,7 @@
 # Toplevel Makefile for STk
 #
 # 
-# Copyright © 1993-1999 Erick Gallesio - I3S-CNRS/ESSI <eg@unice.fr>
+# Copyright ? 1993-1999 Erick Gallesio - I3S-CNRS/ESSI <eg@unice.fr>
 # 
 # Permission to use, copy, modify, distribute,and license this
 # software and its documentation for any purpose is hereby granted,
@@ -55,6 +55,7 @@ config.make: Makefile
 	@echo "os		= $(os)"		>> config.make
 	@echo "prefix		= $(PREFIX)"		>> config.make
 	@echo "CC		= gcc"			>> config.make
+	@echo "CFLAGS = -O2 -Wno-deprecated-non-prototype" >> config.make
 	@cat ./paths					>> config.make
 
 tcl-dir: config.make
@@ -142,7 +143,7 @@ common-release:
 						    stk/$(VERSION)/images \
 						    stk/$(VERSION)/man    \
 						    stk/man)
-	@echo "Terminé. Le fichier est dans /tmp/STk-$(VERSION)-common.tar.gz"
+	@echo "Termin? Le fichier est dans /tmp/STk-$(VERSION)-common.tar.gz"
 
 clean-before:
 	@if [ -d $(PREFIX)/lib/stk ]; \

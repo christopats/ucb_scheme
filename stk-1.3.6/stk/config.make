@@ -6,6 +6,7 @@ machine		= arm64
 os		= Darwin
 prefix		= /usr/local
 CC		= gcc
+CFLAGS = -O2 -Wno-deprecated-non-prototype
 stkdir		= $(prefix)/lib/stk
 libdir 		= $(stkdir)/$(VERSION)
 execdir		= $(prefix)/bin/arch/$(os)/$(machine)
