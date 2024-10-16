@@ -29,6 +29,7 @@
 #  include "tclMath.h"
 #endif
 #include "tkScale.h"
+#include <stdlib.h>
 
 static Tk_ConfigSpec configSpecs[] = {
     {TK_CONFIG_BORDER, "-activebackground", "activeBackground", "Foreground",

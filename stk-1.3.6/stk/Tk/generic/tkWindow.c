@@ -17,6 +17,7 @@
 
 #include "tkPort.h"
 #include "tkInt.h"
+#include <stdlib.h>
 
 /*
  * Count of number of main windows currently open in this process.

@@ -19,6 +19,7 @@
 #include "tkInt.h"
 #include "tkUnixInt.h"
 #include <errno.h>
+#include <stdlib.h>
 
 #ifdef BGLK_CODE
 #  define STk_stringify_result 	SCM_stringify_result

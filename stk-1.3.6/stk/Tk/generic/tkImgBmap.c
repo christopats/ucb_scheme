@@ -14,6 +14,7 @@
 
 #include "tkInt.h"
 #include "tkPort.h"
+#include <stdlib.h>
 
 /*
  * The following data structure represents the master for a bitmap

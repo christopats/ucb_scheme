@@ -15,6 +15,7 @@
 
 #include "tkPort.h"
 #include "tk.h"
+#include <stdlib.h>
 
 /*
  * Default table of argument descriptors.  These are normally available

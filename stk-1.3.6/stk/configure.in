@@ -387,6 +387,14 @@ AC_HAVE_FUNCS(sigaction select)
 AC_CHECK_LIB(dl, dlopen, [LIBS="$LIBS -ldl"])
 LIBS="$LIBS -lm"
 
+
+AC_MSG_CHECKING([for GMP])
+AC_CHECK_LIB([gmp], [__gmp_version], [have_gmp=yes], [have_gmp=no])
+if test "$have_gmp" = "no"; then
+    AC_DEFINE([USE_GMPLITE], [1], [Define to use GMPlite instead of system GMP])
+fi
+AC_MSG_RESULT([$have_gmp])
+
 #--------------------------------------------------------------------
 # Some system needs extra libraries which are already tested for
 # stk (such as libsocket.a or libnsl.a)

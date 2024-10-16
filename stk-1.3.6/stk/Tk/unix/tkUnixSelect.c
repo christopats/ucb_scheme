@@ -14,6 +14,7 @@
 
 #include "tkInt.h"
 #include "tkSelect.h"
+#include <stdlib.h>
 
 /*
  * When handling INCR-style selection retrievals, the selection owner

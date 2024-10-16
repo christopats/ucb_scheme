@@ -1,4 +1,4 @@
-/* 
+b/* 
  * tkUnixSend.c --
  *
  *	This file provides procedures that implement the "send"
@@ -17,6 +17,7 @@
 #include "tkPort.h"
 #include "tkInt.h"
 #include "tkUnixInt.h"
+#include <stdlib.h> 
 
 #ifdef BGLK_CODE
 #  define STk_stringify SCM_stringify

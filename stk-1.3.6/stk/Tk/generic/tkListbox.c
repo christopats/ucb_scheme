@@ -17,6 +17,7 @@
 #include "tkPort.h"
 #include "default.h"
 #include "tkInt.h"
+#include <stdlib.h>
 
 #ifdef BGLK_CODE
 #  define STk_stringify_result	SCM_stringify_result

@@ -15,6 +15,7 @@
  */
 
 #include "tkWinInt.h"
+#include <stdlib.h>
 
 /*
  * Event structure for synthetic activation events.  These events are

@@ -16,6 +16,7 @@
 
 #include "tkPort.h"
 #include "tkInt.h"
+#include <stdlib.h>
 
 /*
  * The option database is stored as one tree for each main window.

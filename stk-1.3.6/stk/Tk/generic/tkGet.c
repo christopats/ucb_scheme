@@ -18,6 +18,7 @@
 
 #include "tkInt.h"
 #include "tkPort.h"
+#include <stdlib.h>
 
 /*
  * The hash table below is used to keep track of all the Tk_Uids created

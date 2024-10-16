@@ -17,6 +17,7 @@
 #include "tkCanvas.h"
 #include "tkPort.h"
 #include "default.h"
+#include <stdlib.h>
 
 /*
  * The structure below defines the record for each text item.

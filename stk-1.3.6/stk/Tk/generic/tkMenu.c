@@ -70,6 +70,7 @@
 
 #include "tkPort.h"
 #include "tkMenu.h"
+#include <stdlib.h>
 
 #ifdef BGLK_CODE
 #  define STk_tcl_setvar	SCM_tcl_setvar

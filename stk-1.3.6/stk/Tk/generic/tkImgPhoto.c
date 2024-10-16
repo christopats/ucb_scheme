@@ -26,6 +26,7 @@
 #  include "tclMath.h"
 #endif
 #include <ctype.h>
+#include <stdlib.h>
 
 /*
  * Declaration for internal Xlib function used here:
